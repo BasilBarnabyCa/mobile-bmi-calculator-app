@@ -43,7 +43,7 @@ class BodyMassIndex (dataBinding: ActivityMainBinding, private val context: Cont
     // toggle unittype
     private fun toggleUnitType () {
         binding.toggleButton.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
+            if (!isChecked) {
                 binding.heightUnitLabelText.text = "inches"
                 binding.weightUnitLabelText.text = "pounds"
             } else {
