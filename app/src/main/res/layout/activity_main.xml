@@ -8,12 +8,58 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/title_text_margin_top"
+        android:paddingTop="@dimen/title_text_p_y"
+        android:paddingBottom="@dimen/title_text_p_y"
+        android:text="@string/title_text"
+        android:textAlignment="center"
+        android:textSize="@dimen/title_text_size"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/inputLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/buttonsLayoutView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintVertical_bias="0.0"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttons_layout_height"
+        android:background="@color/black"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/resultLayoutView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resultLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/result_layout_height"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result Goes here" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
