@@ -38,7 +38,7 @@
         <LinearLayout
             android:id="@+id/innerVerticalInputView"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="20dp"
             android:layout_weight="1"
             android:gravity="start"
             android:orientation="vertical"
@@ -56,7 +56,7 @@
             <EditText
                 android:id="@+id/fullNameEditTextView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:autofillHints=""
                 android:inputType="text"
                 android:text="" />
@@ -183,12 +183,22 @@
                 android:paddingEnd="@dimen/main_content_p_y"
                 android:text="@string/imperial_label_text" />
 
-            <ToggleButton
-                android:id="@+id/toggleButton"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ToggleButton" />
+                >
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/toggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/MetricLabelText"
@@ -233,6 +243,7 @@
         android:layout_height="@dimen/result_layout_height"
         android:gravity="center"
         android:orientation="vertical"
+        android:padding="@dimen/main_content_p_y"
         app:layout_constraintTop_toBottomOf="@id/buttonsLayoutView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -243,29 +254,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/result_title_text" />
+            android:text="@string/result_title_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/bmiTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/result_value_text" />
+            android:textSize="60sp"
+            android:textStyle="bold" />
 
 
         <ProgressBar
             android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
+            style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:progress="0"
+            android:max="40"/>
 
         <TextView
             android:id="@+id/categoryTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/category_text" />
+            android:text="@string/category_text"
+            android:textSize="24sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

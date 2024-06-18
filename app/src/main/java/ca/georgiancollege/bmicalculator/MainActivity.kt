@@ -1,3 +1,10 @@
+/** Author: Basil Barnaby
+ * Student Number: 200540109
+ * Course: COMP3025 - Mobile and Pervasive Computing
+ * Assignment: 2 - BMI APP
+ * Target Device: Google Pixel 8 Pro
+ * Version: 0.2.0
+ */
 package ca.georgiancollege.bmicalculator
 
 import android.os.Bundle
@@ -16,11 +23,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val bmi = BodyMassIndex(binding, this)
     }
 }
