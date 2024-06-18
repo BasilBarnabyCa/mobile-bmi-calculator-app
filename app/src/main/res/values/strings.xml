@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
     <string name="title_text">Personal Information</string>
+    <string name="full_name_label_text">Full Name</string>
+    <string name="age_label_text">Age</string>
+    <string name="height_lable_text">Height</string>
+    <string name="height_unit_label_text">inches</string>
+    <string name="weight_label_text">Weight</string>
+    <string name="weight_unit_lable_text">pounds</string>
+    <string name="imperial_label_text">Imperial</string>
+    <string name="metric_label_text">Metric</string>
+    <string name="submit_button_text">Submit</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="result_title_text">Your BMI:\n</string>
+    <string name="result_value_text">24.2</string>
+    <string name="category_text">Normal Range</string>
 </resources>

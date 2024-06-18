@@ -26,40 +26,246 @@
     <LinearLayout
         android:id="@+id/inputLayoutView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/input_layout_height"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/buttonsLayoutView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-        app:layout_constraintVertical_bias="0.0"></LinearLayout>
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/innerVerticalInputView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/main_content_p_x"
+            android:paddingTop="@dimen/main_content_p_y"
+            android:paddingEnd="@dimen/main_content_p_x"
+            android:paddingBottom="@dimen/main_content_p_y">
+
+            <TextView
+                android:id="@+id/fullNameLabelTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/full_name_label_text" />
+
+            <EditText
+                android:id="@+id/fullNameEditTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:inputType="text"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/innHorizontalInputView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/main_content_p_x"
+            android:paddingTop="@dimen/main_content_p_y"
+            android:paddingEnd="@dimen/main_content_p_x"
+            android:paddingBottom="@dimen/main_content_p_y"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ageLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/main_content_p_y"
+                android:text="@string/age_label_text" />
+
+            <EditText
+                android:id="@+id/ageEditTextView"
+                android:autofillHints=""
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/innerSecondHorizontalInputView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/main_content_p_x"
+            android:paddingTop="@dimen/main_content_p_y"
+            android:paddingEnd="@dimen/main_content_p_x"
+            android:paddingBottom="@dimen/main_content_p_y"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/heightLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/main_content_p_y"
+                android:text="@string/height_lable_text" />
+
+            <EditText
+                android:id="@+id/heightEditTextView"
+                android:autofillHints=""
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/heightUnitLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/main_content_p_y"
+                android:text="@string/height_unit_label_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/innerThirdHorizontalInputView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/main_content_p_x"
+            android:paddingTop="@dimen/main_content_p_y"
+            android:paddingEnd="@dimen/main_content_p_x"
+            android:paddingBottom="@dimen/main_content_p_y"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/weightLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/main_content_p_y"
+                android:text="@string/weight_label_text" />
+
+            <EditText
+                android:id="@+id/weightEditTextView"
+                android:autofillHints=""
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/weightUnitLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/main_content_p_y"
+                android:text="@string/weight_unit_lable_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fourthInnerHorizontalInputView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/main_content_p_x"
+            android:paddingTop="@dimen/main_content_p_y"
+            android:paddingEnd="@dimen/main_content_p_x"
+            android:paddingBottom="@dimen/main_content_p_y">
+
+            <TextView
+                android:id="@+id/imperialLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/main_content_p_y"
+                android:text="@string/imperial_label_text" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton" />
+
+            <TextView
+                android:id="@+id/MetricLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/main_content_p_y"
+                android:text="@string/metric_label_text" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/buttonsLayoutView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/buttons_layout_height"
-        android:background="@color/black"
-        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/resultLayoutView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_button_text" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button_text" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/resultLayoutView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/result_layout_height"
+        android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonsLayoutView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/categoryTextView"
+            android:id="@+id/resultTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/result_title_text" />
+
+        <TextView
+            android:id="@+id/bmiTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/result_value_text" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Result Goes here" />
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/category_text" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
